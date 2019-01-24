@@ -1,5 +1,7 @@
 <?php
-//listing.php
+// code @GITHUB
+// bit.ly/gitjson
+// listing.php
 include "connect.php";
 
 //test simple JSON

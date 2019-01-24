@@ -1,5 +1,7 @@
 <?php
-//search.php
+// code @GITHUB
+// bit.ly/gitjson
+// search.php
 include "connect.php";
 
 //keyword

@@ -1,7 +1,7 @@
 <?php
-// code @
-// github.com/khirulnizam/jsonunimap
-//insert.php
+// code @GITHUB
+// bit.ly/gitjson
+// insert.php
 include "connect.php";
 
 $id=$_POST['id'];

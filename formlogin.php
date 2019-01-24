@@ -1,3 +1,6 @@
+// code @GITHUB
+// bit.ly/gitjson
+
 <form method="post" action="">
 	<input type="text" name="uname"
 	placeholder="Username"><br>
