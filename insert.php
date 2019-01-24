@@ -10,7 +10,6 @@ $website=$_POST['website'];
 $contact=$_POST['contact'];
 $trainingdesc=$_POST['trainingdesc'];
 
-
 $rs = mysqli_query($db,
 	"INSERT INTO a_training 
 	VALUES 

@@ -1,5 +1,8 @@
 <?php
-include "formlogin.php";
+// code @GITHUB
+// bit.ly/gitjson
+
+//include "formlogin.php";
 //login.php
 include "connect.php";
 //provide username& password
