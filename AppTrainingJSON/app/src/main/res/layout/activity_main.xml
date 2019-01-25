@@ -18,7 +18,8 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="166dp"
-            tools:srcCompat="@drawable/lgin_user" />
+            app:srcCompat="@drawable/lgin_user"
+            tools:src="@drawable/lgin_user" />
 
         <EditText
             android:id="@+id/txtusername"
