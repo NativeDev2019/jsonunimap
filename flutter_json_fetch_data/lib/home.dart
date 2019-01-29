@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
+
       body: FutureBuilder<List<Training>>(
         future: fetchTrainings(http.Client()),
         builder: (context, snapshot) {

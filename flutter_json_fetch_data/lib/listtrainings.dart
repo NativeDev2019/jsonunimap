@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'training.dart';
+import 'package:url_launcher/url_launcher.dart';
  
 class ListViewTrainings extends StatelessWidget {
   final List<Training> trainings;
@@ -37,7 +38,7 @@ class ListViewTrainings extends StatelessWidget {
                         backgroundColor: Colors.blueAccent,
                         radius: 35.0,
                         child: Text(
-                          "ID ${trainings[position].id}",
+                          '${trainings[position].id}',
                           style: TextStyle(
                             fontSize: 22.0,
                             color: Colors.white,
@@ -46,7 +47,8 @@ class ListViewTrainings extends StatelessWidget {
                       )
                     ],
                   ),
-                  onTap: () => _onTapItem(context, trainings[position]),
+                  //onTap: () => _onTapItem(context, trainings[position])
+                  onTap: ()=> _launchURL('${trainings[position].website}'),
                 ),
               ],
             );
@@ -60,5 +62,14 @@ class ListViewTrainings extends StatelessWidget {
         .showSnackBar(
           new SnackBar(content: new Text(training.id + ' - ' + training.trainingname))
           );
+  }
+
+  _launchURL(String website) async {
+    String url = website;
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
