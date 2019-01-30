@@ -21,6 +21,7 @@ dependencies:
   http: ^0.12.0+1 
   #to add http service to apps
   url_launcher: ^5.0.0
+  #to provide webpage view
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
