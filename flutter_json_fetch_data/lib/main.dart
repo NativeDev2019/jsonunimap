@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
  
     return MaterialApp(
       title: appTitle,
+      
+      
       theme: ThemeData(
         // Define the default Brightness and Colors
         brightness: Brightness.dark,
@@ -29,6 +31,9 @@ class MyApp extends StatelessWidget {
       ),
 
       home: HomePage(title: appTitle),
+      
+
     );
+    
   }
 }
