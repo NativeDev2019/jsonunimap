@@ -46,20 +46,28 @@ public class MainActivity extends AppCompatActivity
 
     //capture username/password
     String username, password;
-    public void onClick(View v){
 
-        String msg="Welcome ";
-        msg = msg+txtusername.getText().toString();
-        msg=msg+"\nPassword ";
-        msg =msg+txtpassword.getText().toString();
-        //popup
-        Toast.makeText(getApplicationContext(),msg,
-                Toast.LENGTH_LONG).show();
+    public void onClick(View v){//onClick buttons
+        if (v.getId()==R.id.btnlogin) {
 
-        username=txtusername.getText().toString();
-        password=txtpassword.getText().toString();
-        //invoke UserLoginTask
-        new UserLoginTask(username, password).execute();
+
+            String msg = "Welcome ";
+            msg = msg + txtusername.getText().toString();
+            msg = msg + "\nPassword ";
+            msg = msg + txtpassword.getText().toString();
+            //popup
+            Toast.makeText(getApplicationContext(), msg,
+                    Toast.LENGTH_LONG).show();
+
+            username = txtusername.getText().toString();
+            password = txtpassword.getText().toString();
+            //invoke UserLoginTask
+            new UserLoginTask(username, password).execute();
+        }else{
+            //goto newuser screen
+            Intent inewuser=new Intent(this, CreateUser.class);
+            startActivity(inewuser);
+        }//onCLick go to create new User
     }//end onClick
     //
 
