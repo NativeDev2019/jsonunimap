@@ -31,7 +31,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener{
     private EditText txtusername, txtpassword;
-    private Button btnlogin;
+    private Button btnlogin,btngocretaeuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +40,11 @@ public class MainActivity extends AppCompatActivity
         //bind to UI
         txtusername= (EditText)findViewById(R.id.txtusername);
         txtpassword= (EditText)findViewById(R.id.txtpassword);
+        //buttons
         btnlogin=(Button)findViewById(R.id.btnlogin);
         btnlogin.setOnClickListener(this);
+        btngocretaeuser=(Button)findViewById(R.id.btngocreateuser);
+        btngocretaeuser.setOnClickListener(this);
     }//end onCreate
 
     //capture username/password
